@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archoa — Team Portfolio</title>
+  <meta name="description" content="A studio-minded student team crafting quiet, confident interfaces with restrained design and crisp engineering.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background effects -->
+  <div class="bg-vignette" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#home" class="logo-group">
+        <div class="logo-icon">
+          <span>A</span>
+        </div>
+        <div class="logo-text">
+          <div class="logo-title">Archoa</div>
+          <div class="logo-subtitle">TEAM PORTFOLIO</div>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#work">Work</a>
+        <a href="#culture">Culture</a>
+        <button class="btn-terminal-header" data-open-terminal>
+          Open Terminal
+          <span class="kbd-hint">Ctrl K</span>
+        </button>
+      </nav>
+
+      <button class="btn-terminal-mobile" data-open-terminal>Terminal</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="version-badge">
+          <span class="dot"></span>
+          VERSION 3 — REFINED
+        </div>
+        <h1 class="hero-title">
+          A quiet, confident portfolio—
+          <span class="hero-subtitle">built by three specialists.</span>
+        </h1>
+        <p class="hero-description">
+          Archoa is a student team with a studio mindset: restrained design, crisp engineering, and
+          reliable delivery. Explore our work through an interactive terminal—clean, functional,
+          and genuinely useful.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn-primary" data-open-terminal>Enter Terminal</button>
+          <a href="#team" class="btn-secondary">Meet the team</a>
+          <a href="#work" class="btn-tertiary">View highlights</a>
+        </div>
+
+        <dl class="hero-stats">
+          <div class="stat-card">
+            <dt>Build</dt>
+            <dd>Fast</dd>
+          </div>
+          <div class="stat-card">
+            <dt>Design</dt>
+            <dd>Tasteful</dd>
+          </div>
+          <div class="stat-card">
+            <dt>Quality</dt>
+            <dd>Strict</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-preview">
+        <div class="preview-glow"></div>
+        <div class="preview-window">
+          <div class="preview-header">
+            <div class="window-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="window-title">archoa@portfolio</div>
+            <div class="window-shortcut">⌘K</div>
+          </div>
+          <div class="preview-content">
+            <div class="preview-terminal">
+              <pre>archoa@portfolio:~$ whoami
+Archoa — Team Portfolio
+
+archoa@portfolio:~$ weather kathmandu
+Live weather + ASCII report
+
+archoa@portfolio:~$ open team
+manifesto.txt  members.txt</pre>
+              <div class="preview-commands">
+                <button data-open-terminal>help</button>
+                <button data-open-terminal>neofetch</button>
+                <button data-open-terminal>weather kathmandu</button>
+                <button data-open-terminal>cat /README.txt</button>
+              </div>
+            </div>
+
+            <div class="preview-features">
+              <div class="feature-card">
+                <div class="feature-label">AESTHETIC</div>
+                <div class="feature-title">Old money</div>
+                <p class="feature-desc">
+                  Warm neutrals, sharp typography, and a calm hierarchy.
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-label">INTERACTION</div>
+                <div class="feature-title">Practical</div>
+                <p class="feature-desc">
+                  Terminal is real—no alerts, no fake buttons.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <div class="kicker">
+          <span class="dot"></span>
+          // ABOUT
+        </div>
+        <h2 class="section-title">A studio approach to school projects</h2>
+        <p class="section-subtitle">We treat this like a client brief: clear goals, disciplined aesthetics, and a product that feels finished.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Tasteful minimalism</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>We removed loud gradients and neon accents—replacing them with warm neutrals, typography, and spacing.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Interactive narrative</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>The terminal is not decoration. It's a guided way to explore team files, roles, and project notes.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Engineering discipline</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>Accessible components, keyboard support, and predictable behavior. Quality is a feature.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Real data</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>The weather command calls a public API and renders an ASCII report—simple, useful, impressive.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Crafted copy</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>We communicate like a studio: concise, confident, and focused on outcomes.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Competition-ready</h3>
+            <span class="arrow">↗</span>
+          </div>
+          <p>A cohesive experience that stands out without shouting—exactly what judges remember.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+      <div class="section-header">
+        <div class="kicker">
+          <span class="dot"></span>
+          // TEAM
+        </div>
+        <h2 class="section-title">Three members, one standard</h2>
+        <p class="section-subtitle">A small team with complementary strengths: design, engineering, and reliability.</p>
+      </div>
+
+      <div id="team-grid" class="team-grid">
+        <!-- Team members will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section">
+      <div class="section-header">
+        <div class="kicker">
+          <span class="dot"></span>
+          // WORK
+        </div>
+        <h2 class="section-title">What we built (and why it wins)</h2>
+        <p class="section-subtitle">Not a list of buzzwords—features that demonstrate skill, taste, and execution.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Terminal engine</h3>
+          <p>Command parsing, virtual file system, user switching, quick commands, and keyboard-first flows.</p>
+          <div class="tags">
+            <span class="tag">help</span>
+            <span class="tag">ls</span>
+            <span class="tag">cd</span>
+            <span class="tag">cat</span>
+            <span class="tag">su</span>
+          </div>
+        </div>
+        <div class="work-card">
+          <h3>Live weather (API)</h3>
+          <p>Uses Open‑Meteo geocoding + forecast for a real-time report, then renders an ASCII weather card.</p>
+          <div class="tags">
+            <span class="tag">weather &lt;city&gt;</span>
+            <span class="tag">ascii</span>
+          </div>
+        </div>
+        <div class="work-card">
+          <h3>Elegant design system</h3>
+          <p>Old money vibe: warm paper background, serif headlines, muted contrast, and careful spacing.</p>
+          <div class="tags">
+            <span class="tag">typography</span>
+            <span class="tag">spacing</span>
+            <span class="tag">hierarchy</span>
+          </div>
+        </div>
+        <div class="work-card">
+          <h3>Competition polish</h3>
+          <p>Fast, accessible, responsive. No cheap effects. Every interaction supports the story.</p>
+          <div class="tags">
+            <span class="tag">a11y</span>
+            <span class="tag">keyboard</span>
+            <span class="tag">responsive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="section">
+      <div class="section-header">
+        <div class="kicker">
+          <span class="dot"></span>
+          // CULTURE
+        </div>
+        <h2 class="section-title">How we work</h2>
+        <p class="section-subtitle">A simple process that keeps the output premium.</p>
+      </div>
+
+      <div class="culture-grid">
+        <div class="culture-card">
+          <div class="culture-step">STEP 1</div>
+          <div class="culture-title">Brief</div>
+          <p>Define what matters. Cut what doesn't.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-step">STEP 2</div>
+          <div class="culture-title">Design</div>
+          <p>Layout, typography, rhythm, and restraint.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-step">STEP 3</div>
+          <div class="culture-title">Build</div>
+          <p>Implement fast, accessible interactions.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-step">STEP 4</div>
+          <div class="culture-title">Polish</div>
+          <p>Test edge cases. Tighten copy. Ship.</p>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h3 class="cta-title">Explore Archoa in the Terminal</h3>
+        <p class="cta-description">
+          Choose a profile, run commands, read the manifesto, and pull live weather—everything works.
+        </p>
+
+        <div id="profile-selector" class="profile-grid">
+          <!-- Profiles will be dynamically inserted here -->
+        </div>
+
+        <div class="cta-button">
+          <button class="btn-cta" data-open-terminal>Open Terminal</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <div class="footer-title">Archoa</div>
+          <p class="footer-text">© <span id="year"></span> Archoa. Built for the school project competition.</p>
+        </div>
+        <div class="footer-buttons">
+          <a href="#home" class="btn-footer-secondary">Back to top</a>
+          <button class="btn-footer-primary" data-open-terminal>Terminal</button>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Terminal Modal -->
+  <div id="terminal-modal" class="terminal-modal" style="display: none;">
+    <div class="modal-overlay" data-close-terminal></div>
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="modal-title">archoa@portfolio — terminal</div>
+        <div class="modal-controls">
+          <label class="user-label">User</label>
+          <select id="user-select" class="user-select">
+            <!-- Options will be dynamically inserted -->
+          </select>
+          <button class="btn-esc" data-close-terminal>Esc</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="terminal-main">
+          <div id="terminal-output" class="terminal-output"></div>
+          
+          <div class="terminal-input-area">
+            <form id="terminal-form" class="terminal-form">
+              <span class="prompt-user" id="prompt-user">prayatna@archoa</span>
+              <span class="prompt-separator">:</span>
+              <span class="prompt-path" id="prompt-path">/home/prayatna</span>
+              <span class="prompt-dollar">$</span>
+              <input 
+                type="text" 
+                id="terminal-input" 
+                class="terminal-input" 
+                placeholder="Type a command (help)"
+                autocomplete="off"
+                aria-label="Terminal input"
+              />
+              <button type="submit" class="btn-run">Run</button>
+            </form>
+          </div>
+        </div>
+
+        <aside class="terminal-sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-title">QUICK START</div>
+            <div class="sidebar-commands">
+              <button class="cmd-btn" data-command="help">help</button>
+              <button class="cmd-btn" data-command="whoami">whoami</button>
+              <button class="cmd-btn" data-command="ls /">ls /</button>
+              <button class="cmd-btn" data-command="open team">open team</button>
+              <button class="cmd-btn" data-command="cat /README.txt">cat /README.txt</button>
+              <button class="cmd-btn" data-command="weather kathmandu">weather kathmandu</button>
+              <button class="cmd-btn" data-command="neofetch">neofetch</button>
+            </div>
+            <div class="sidebar-tip">
+              Tip: press <span class="kbd">Esc</span> to close.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member Data -->
+  <script id="member-data" type="application/json">
+  [
+    {
+      "id": "prayatna",
+      "name": "Prayatna Sapkota",
+      "role": "Frontend & UI/UX",
+      "vibe": "Design-forward interfaces, precise spacing, and micro-interactions that feel expensive—not loud.",
+      "skills": ["Information Architecture", "UI Systems", "Accessibility", "Motion", "Figma"],
+      "photoUrl": "https://images.unsplash.com/photo-1611691543541-6a35ffbe5d80?auto=format&fit=crop&w=800&q=80",
+      "links": [
+        { "label": "Email", "href": "mailto:prayatna@example.com" },
+        { "label": "GitHub", "href": "https://github.com/" },
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/" }
+      ]
+    },
+    {
+      "id": "shubham",
+      "name": "Shubham Pradhananga",
+      "role": "Backend & Data",
+      "vibe": "Clean APIs, pragmatic architecture, and systems that stay fast when the stakes go up.",
+      "skills": ["Node.js", "Python", "Databases", "API Design", "Performance"],
+      "photoUrl": "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?auto=format&fit=crop&w=800&q=80",
+      "links": [
+        { "label": "Email", "href": "mailto:shubham@example.com" },
+        { "label": "GitHub", "href": "https://github.com/" },
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/" }
+      ]
+    },
+    {
+      "id": "dixit",
+      "name": "Dixit Neupane",
+      "role": "QA & Reliability",
+      "vibe": "Testing discipline, security mindset, and the rare ability to make products feel unbreakable.",
+      "skills": ["Testing", "Debugging", "Security", "DX", "Documentation"],
+      "photoUrl": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=800&q=80",
+      "links": [
+        { "label": "Email", "href": "mailto:dixit@example.com" },
+        { "label": "GitHub", "href": "https://github.com/" },
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/" }
+      ]
+    }
+  ]
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
