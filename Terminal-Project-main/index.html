@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft Trio | Creative Developers Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Main Container - wraps all content with max-width for better readability -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="#" aria-label="Home">
+                    <svg class="logo-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 3L3 10L16 17L29 10L16 3Z"/>
+                        <path d="M3 24L16 31L29 24"/>
+                        <path d="M3 17L16 24L29 17"/>
+                    </svg>
+                </a>
+                <span class="logo-text">CodeCraft</span>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <path d="M12 3v2m0 14v2m7-9h2M3 12h2m13.3-6.3l-1.4 1.4M6.3 17.7l-1.4 1.4M17.7 17.7l-1.4-1.4M6.3 6.3l-1.4-1.4"/>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24">
+                    <path d="M20.5 14.1c-1.2 1.3-2.9 2.2-4.8 2.4-3.5.3-6.5-2.4-6.5-5.9 0-2.3 1.3-4.3 3.2-5.3.8-.4 1.6-.6 2.5-.5-1.7 1.1-2.8 3-2.7 5.1.1 3.1 2.9 5.5 6.1 5.7 1.3.1 2.5-.3 3.6-1z"/>
+                </svg>
+            </button>
+        </header>
+        
+        <!-- Hero Section - Team Introduction with animated background -->
+        <section class="hero">
+            <div class="hero-background" aria-hidden="true">
+                <div class="airplane">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="#FF5A5F" style="transform: scaleX(-1) rotate(30deg);">
+                        <path d="M22 2L2 9L9 13L17 8L12 17L18 22L22 2Z"/>
+                    </svg>
+                </div>
+                <div class="cloud">☁️</div>
+                <div class="cloud">☁️</div>
+            </div>
+            
+            <div class="team-hero">
+                <div class="team-avatars">
+                    <div class="team-avatar" data-member="shubham">
+                        <div class="avatar-ring shubham"><img src="assets/photos/shubham.jpg" alt="Pic"></div>
+                        <span class="avatar-name">Shubham</span>
+                    </div>
+                    <div class="team-avatar" data-member="prayatna">
+                        <div class="avatar-ring prayatna"><img src="assets/photos/prayatna.jpg" alt="Pic"></div>
+                        <span class="avatar-name">Prayatna</span>
+                    </div>
+
+                    <!-- <div class="team-avatar" data-member="dixit">
+                        <div class="avatar-ring dixit"><img src="assets/photos/dixit.jpg" alt="Pic"></div>
+                        <span class="avatar-name">Dixit</span>
+                    </div> -->
+                </div>
+                
+                <div class="team-info">
+                    <h1 class="team-name">CodeCraft Trio</h1>
+                    <p class="team-tagline">Three minds. One vision. Infinite possibilities. ✨</p>
+                    <p class="team-bio">A passionate team of developers from Nepal, building innovative web experiences and pushing the boundaries of what's possible with code.</p>
+                    
+                    <div class="profile-meta">
+                        <div class="profile-meta-item">
+                            <span>🌐</span>
+                            <span>Available for Projects</span>
+                        </div>
+                        <div class="profile-meta-item">
+                            <span>📍</span>
+                            <span>Banepa & Panauti, Nepal</span>
+                        </div>
+                        <div class="profile-meta-item">
+                            <span>🎓</span>
+                            <span>Student Developers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-tech-stack">
+                        <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-badge"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-badge"><i class="fab fa-linux"></i> Linux</span>
+                    </div>
+                    
+                    <!-- Links button removed -->
+
+                </div>
+            </div>
+            
+            <div class="newsletter">
+                <h3 class="newsletter-heading">Stay updated with our latest projects!</h3>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <input type="email" 
+                           class="newsletter-input" 
+                           id="newsletter-email"
+                           placeholder="Email Address" 
+                           aria-label="Email address"
+                           required>
+                    <button type="submit" class="newsletter-button">Subscribe!</button>
+                </form>
+                <p class="newsletter-disclaimer">No spam. Unsubscribe any time.</p>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs - Switch between different pages -->
+        <nav class="nav">
+            <div class="nav-item active" data-tab="feed">Feed</div>
+            <div class="nav-item" data-tab="about">About</div>
+            <div class="nav-item" data-tab="content">Projects</div>
+            <div class="nav-item" data-tab="guestbook">Guestbook</div>
+        </nav>
+        
+        <main>
+            <!-- Feed Section -->
+            <section class="feed" id="feed-section">
+                <div class="feed-controls" style="margin-bottom: 20px; text-align: right;">
+                    <button id="create-post-btn" class="quick-cmd" style="padding: 8px 16px; font-weight: bold;">+ Create Post</button>
+                </div>
+                <div id="feed-container">
+                    <!-- Dynamic Posts will be rendered here -->
+                </div>
+            </section>
+            
+            <!-- About Section with Team Info and Terminal -->
+            <section class="about hidden" id="about-section">
+                <h2>About Our Team</h2>
+                <div class="about-intro">
+                    <p>We're <strong>CodeCraft Trio</strong> — three passionate student developers from Nepal who came together to create something extraordinary. Each of us brings unique skills to the table, forming a complete development team.</p>
+                    <p style="margin-top: 20px;">
+                        Our journey began in a college computer lab where we realized our shared love for clean code and innovative design. Since then, we've collaborated on numerous projects, pushing each other to learn new technologies and best practices. 
+                        We believe in open-source software, continuous learning, and building tools that solve real-world problems. Whether it's a complex backend system or a pixel-perfect frontend interface, we approach every challenge with curiosity and dedication.
+                    </p>
+                </div>
+
+                <!-- Team Members Grid -->
+                <div class="team-grid">
+                    <div class="team-member-card" data-member="prayatna">
+                        <div class="member-avatar prayatna"><img src="assets/photos/prayatna.jpg" alt="Pic"></div>
+                        <h3>Prayatna Sapkota</h3>
+                        <span class="member-role">Frontend Developer</span>
+                        <p>The architecture wizard. Builds robust systems and keeps our data flowing smoothly.</p>
+                        <div class="member-skills">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member-card" data-member="shubham">
+                        <div class="member-avatar shubham"><img src="assets/photos/shubham.jpg" alt="Pic"></div>
+                        <h3>Shubham Pradhananga</h3>
+                        <span class="member-role">Frontend Developer & UI/UX</span>
+                        <p>Creative mind behind our interfaces. Passionate about clean design and smooth user experiences.</p>
+                        <div class="member-skills">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Database</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member-card" data-member="dixit">
+                        <div class="member-avatar dixit">D</div>
+                        <h3>Dixit Neupane</h3>
+                        <span class="member-role">Bug Hunter & QA</span>
+                        <p>Our quality guardian. Finds bugs before they find us and keeps our code clean.</p>
+                        <div class="member-skills">
+                            <span>Testing</span>
+                            <span>JavaScript</span>
+                            <span>Debugging</span>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Terminal Section - Interactive command-line interface for each team member -->
+            <div class="terminal-section">
+                    <div class="terminal-header-info">
+                        <h3>🖥️ Interactive Terminal</h3>
+                        <p>Select a team member below to explore their profile through our custom terminal interface!</p>
+                        <button id="reopen-terminal" class="reopen-btn hidden" aria-label="Re-open Terminal">
+                            <i class="fas fa-terminal"></i> Re-open Terminal
+                        </button>
+                    </div>
+                        
+                <!-- User Selector Buttons - Click to switch between team members (P, S, D) -->
+                <div class="terminal-user-selector">
+                        <button class="user-select-btn active" data-user="prayatna">
+                            <span class="user-indicator prayatna"></span>
+                            Prayatna
+                        </button>
+                        <button class="user-select-btn" data-user="shubham">
+                            <span class="user-indicator shubham"></span>
+                            Shubham
+                        </button>
+                        <button class="user-select-btn" data-user="dixit">
+                            <span class="user-indicator dixit"></span>
+                            Dixit
+                        </button>
+                    </div>
+
+                    <!-- Terminal Window -->
+                    <div class="terminal-window">
+                        <div class="terminal-titlebar">
+                            <div class="terminal-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="terminal-title" id="terminal-title">prayatna@codecraft:~</div>
+                            <div class="fullscreen-user-switch">
+                                <button class="fs-user-btn" data-user="prayatna">Prayatna</button>
+                                <button class="fs-user-btn" data-user="shubham">Shubham</button>
+                                <button class="fs-user-btn" data-user="dixit">Dixit</button>
+                            </div>
+                            <div class="terminal-spacer"></div>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-output" id="terminal-output"></div>
+                            <div class="terminal-input-line">
+                                <span class="terminal-prompt" id="terminal-prompt">prayatna@codecraft:~$</span>
+                                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type 'help' to get started...">
+                            </div>
+                        </div>
+                        <div class="terminal-statusbar">
+                            <span id="status-user">user: prayatna</span>
+                            <span id="status-dir">dir: ~</span>
+                            <span id="status-cmds">cmds: 0</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Commands -->
+                    <div class="terminal-quick-commands">
+                        <span class="quick-cmd-label">Quick commands:</span>
+                        <button class="quick-cmd" data-cmd="about">about</button>
+                        <button class="quick-cmd" data-cmd="skills">skills</button>
+                        <button class="quick-cmd" data-cmd="projects">projects</button>
+                        <button class="quick-cmd" data-cmd="contact">contact</button>
+                        <button class="quick-cmd" data-cmd="neofetch">neofetch</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section class="content hidden" id="content-section">
+                <div class="projects-controls" style="margin-bottom: 20px; text-align: right;">
+                    <button id="create-project-btn" class="quick-cmd" style="padding: 8px 16px; font-weight: bold;">+ Add Project</button>
+                </div>
+                <div class="projects-grid" id="projects-container">
+                    <div class="project-card">
+                        <div class="project-image terminal-preview">
+                            <div class="terminal-preview-content">
+                                <span class="preview-prompt">$</span>
+                                <span class="preview-cmd">./terminal-portfolio</span>
+                                <span class="preview-cursor">_</span>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Terminal Portfolio</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <p>An interactive terminal-based portfolio with file system simulation, mini-games, and real commands. Built entirely with vanilla JavaScript.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/58a6ff/ffffff?text=Tech+News" alt="Tech News">
+                        </div>
+                        <div class="project-details">
+                            <h3>Tech News Aggregator</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <p>A modern tech news website that aggregates the latest technology news from around the world using News API.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/ec6cb9/ffffff?text=Weather+App" alt="Weather App">
+                        </div>
+                        <div class="project-details">
+                            <h3>Weather Forecast App</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <p>Real-time weather application with location detection and 5-day forecasts using OpenWeatherMap API.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/7ee787/0d1117?text=Calculator" alt="Calculator">
+                        </div>
+                        <div class="project-details">
+                            <h3>Scientific Calculator</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <p>A fully functional calculator with arithmetic operations, memory functions, and keyboard support.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Guestbook Section -->
+            <section class="guestbook hidden" id="guestbook-section">
+                <h2>Guestbook</h2>
+                <p>Leave a message for our team! Share your thoughts, ask questions, or just say hi. We'd love to hear from you!</p>
+                
+                <div class="guestbook-entries" id="guestbook-entries-container">
+                    <div class="guestbook-entry">
+                        <div class="entry-header">
+                            <div class="user-avatar">👋</div>
+                            <div class="entry-info">
+                                <h3 class="entry-author">Visitor</h3>
+                                <div class="entry-meta">
+                                    <span class="entry-date">📅 Just now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry-content">
+                            <p>Welcome to our guestbook! Be the first to leave a message.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <form id="guestbook-form">
+                    <textarea placeholder="Your message..." rows="4" required></textarea>
+                    <div class="guestbook-form-footer">
+                        <input type="text" placeholder="Your name" required>
+                        <button type="submit">Sign the Guestbook</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:team@codecraft.np" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>© 2025 CodeCraft Trio. Built with 💻, ☕, and teamwork.</p>
+        </footer>
+    </div>
+
+    
+
+    <script type="module" src="script.js"></script>
+    <!-- Post Modal -->
+    <div id="post-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('post-modal')" aria-label="Close">&times;</button>
+            <h2 id="post-modal-title">Create Post</h2>
+            <form id="post-form">
+                <input type="hidden" id="post-id">
+                <div class="form-group">
+                    <label>Author</label>
+                    <div class="user-select-options">
+                        <div class="user-option selected" data-value="prayatna">Prayatna</div>
+                        <div class="user-option" data-value="shubham">Shubham</div>
+                        <div class="user-option" data-value="dixit">Dixit</div>
+                        <div class="user-option" data-value="team">Team</div>
+                    </div>
+                    <input type="hidden" id="post-author" value="prayatna">
+                </div>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="post-title" required placeholder="Enter post title...">
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="post-content" rows="4" required placeholder="What's on your mind?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Code Snippet (Optional)</label>
+                    <textarea id="post-code" rows="3" placeholder="Paste code here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Tags (Comma separated)</label>
+                    <input type="text" id="post-tags" placeholder="#tag1, #tag2">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-post-btn">Cancel</button>
+                    <button type="submit" class="btn-save">Save Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('project-modal')" aria-label="Close">&times;</button>
+            <h2 id="project-modal-title">Create Project</h2>
+            <form id="project-form">
+                <input type="hidden" id="project-id">
+                <div class="form-group">
+                    <label>Project Title</label>
+                    <input type="text" id="project-title" required placeholder="Project Name">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="project-desc" rows="3" required placeholder="Short description..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Technologies (Comma separated)</label>
+                    <input type="text" id="project-tech" placeholder="HTML, CSS, JS">
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" id="project-img" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>Demo Link</label>
+                    <input type="text" id="project-demo" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>GitHub Link</label>
+                    <input type="text" id="project-github" placeholder="https://...">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-project-btn">Cancel</button>
+                    <button type="submit" class="btn-save">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Guestbook Edit Modal -->
+    <div id="guestbook-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('guestbook-modal')" aria-label="Close">&times;</button>
+            <h2 id="guestbook-modal-title">Edit Message</h2>
+            <form id="guestbook-edit-form">
+                <input type="hidden" id="guestbook-id">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="guestbook-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="guestbook-message" rows="4" required></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-guestbook-btn">Cancel</button>
+                    <button type="submit" class="btn-save">Update Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
